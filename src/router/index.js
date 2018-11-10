@@ -22,7 +22,7 @@ const router = new Router({
 // 路由导航守卫
 router.beforeEach((to, from, next) => {
   const token = localStorage.getItem('token')
-  if (to.path == '/login' || token) {
+  if (to.path === '/login' || token) {
     next()
   } else {
     next('/login')
